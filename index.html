@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malti Driving School — Nashik</title>
+  <meta name="description" content="Malti Driving School — Bike, Car & Truck training, RTO services, licence assistance. Masrul, Panchvati, Nashik." />
+
+  <!-- Favicon (SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='100%25' height='100%25' fill='%23004aad'/%3E%3Ctext x='50%25' y='55%25' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif'%3EM%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root{--brand:#004aad;--accent:#0077ff;--muted:#f7f7f8;--text:#14202b;--white:#fff;--radius:12px;--container:1100px}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;color:var(--text);background:var(--muted);-webkit-font-smoothing:antialiased}
+
+    /* Top bar & Sticky nav */
+    .topbar{background:var(--brand);color:var(--white);padding:18px 16px;text-align:center}
+    .topbar .brand{font-weight:800;font-size:26px}
+    .topbar p{margin:6px 0 0;opacity:0.95}
+
+    nav{background:var(--accent);display:flex;justify-content:center;gap:28px;padding:12px;position:sticky;top:0;z-index:900;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+    nav a{color:var(--white);text-decoration:none;font-weight:600;padding:6px 8px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.06);transition:all .18s ease}
+
+    /* Hero with smooth reveal */
+    .hero{background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=60');background-size:cover;background-position:center;padding:80px 16px;color:var(--white);box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.22)}
+    .hero-inner{max-width:var(--container);margin:0 auto;text-align:center;opacity:0;transform:translateY(12px);animation:reveal .8s forwards .1s}
+    .hero h1{font-size:40px;margin:6px 0}
+    .hero p{font-size:16px;margin:0 0 18px}
+    .cta{display:inline-block;background:var(--accent);color:var(--white);padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    @keyframes reveal{to{opacity:1;transform:none}}
+
+    /* Main content */
+    .wrap{max-width:var(--container);margin:28px auto;padding:0 16px}
+    .card{background:var(--white);padding:22px;border-radius:var(--radius);box-shadow:0 10px 24px rgba(16,24,40,0.06);margin-bottom:22px;transform:translateY(6px);opacity:0;animation:cardIn .5s forwards}
+    .card:nth-child(1){animation-delay:.12s}.card:nth-child(2){animation-delay:.18s}.card:nth-child(3){animation-delay:.24s}
+    @keyframes cardIn{to{opacity:1;transform:none}}
+
+    h2{color:var(--brand);margin-top:0}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:12px;border:1px solid #eef0f2;text-align:center}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:24px}
+    .contact-card{position:sticky;top:18px}
+
+    /* Gallery grid & lightbox */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+    .gallery img{width:100%;height:130px;object-fit:cover;border-radius:8px;cursor:pointer;transition:transform .22s}
+    .gallery img:hover{transform:scale(1.03)}
+
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:1600;background:rgba(0,0,0,0.75)}
+    .modal.show{display:flex}
+    .modal .box{position:relative}
+    .modal img{max-width:94vw;max-height:86vh;border-radius:8px}
+    .modal .nav{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none}
+    .modal button{background:rgba(0,0,0,0.45);border:0;color:white;padding:10px 14px;border-radius:8px;pointer-events:auto}
+
+    /* Floating WhatsApp buttons */
+    .whats{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;border-radius:999px;width:62px;height:62px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.18);text-decoration:none;z-index:1200}
+    .whats.small{right:18px;bottom:92px;width:52px;height:52px}
+
+    /* Contact form */
+    .form-row{display:flex;gap:10px}
+    .form-row .col{flex:1}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee;font-size:14px}
+    button[type=submit]{background:var(--brand);color:white;padding:12px 18px;border-radius:10px;border:0;cursor:pointer}
+
+    /* Footer */
+    footer{background:#062e63;color:white;padding:26px 16px;margin-top:20px}
+    footer .wrap{display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media(max-width:920px){.grid{grid-template-columns:1fr}.contact-card{position:static}.hero h1{font-size:28px}}
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Malti Driving School</div>
+    <p>Bike • Car • Truck Training | Licence & RTO Services — Masrul, Panchvati, Nashik</p>
+  </header>
+
+  <nav>
+    <a href="#training">Training</a>
+    <a href="#fees">Fees</a>
+    <a href="#services">RTO Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" aria-label="hero">
+    <div class="hero-inner">
+      <h1>Learn Safe Driving with Expert Trainers</h1>
+      <p>Daily batches • Flexible timing • Pickup & Drop available • RTO help & licence assistance</p>
+      <a class="cta" href="#contact">Book a Slot</a>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="grid">
+      <div>
+        <section id="training" class="card">
+          <h2>Driving Training Available</h2>
+          <p>Small batches, structured syllabus, 1-on-1 practice with experienced trainers.</p>
+          <ul>
+            <li>🏍️ Bike Training — Basic handling, clutch control, traffic safety</li>
+            <li>🚗 Car Training — Parking, city driving, highway skills</li>
+            <li>🚛 Truck Training — Heavy vehicle handling, safety procedures</li>
+          </ul>
+        </section>
+
+        <section id="fees" class="card">
+          <h2>Training Fees</h2>
+          <table>
+            <thead><tr><th>Vehicle Type</th><th>Fees</th></tr></thead>
+            <tbody>
+              <tr><td>Bike</td><td>₹ 2,000</td></tr>
+              <tr><td>Car</td><td>₹ 4,500</td></tr>
+              <tr><td>Truck</td><td>₹ 9,000</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:12px"><strong>Training with Licence also available.</strong> Licence charges extra — call or WhatsApp for exact price and documents assistance.</p>
+        </section>
+
+        <section id="services" class="card">
+          <h2>RTO Services & Add-ons</h2>
+          <ul>
+            <li>✔ Learner's Licence & Permanent Licence assistance</li>
+            <li>✔ Licence renewal & test bookings</li>
+            <li>✔ Vehicle registration, number plate & PUC</li>
+            <li>✔ Insurance for all vehicle types</li>
+            <li>✔ Duplicate RC, NOC, ownership transfer</li>
+          </ul>
+        </section>
+
+        <section id="gallery" class="card">
+          <h2>Gallery — Training & Vehicles</h2>
+          <div class="gallery" id="galleryGrid">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=60" alt="bike training" data-full="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=60" alt="car training" data-full="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1549921296-3c2b8d2dbd8b?auto=format&fit=crop&w=800&q=60" alt="truck" data-full="https://images.unsplash.com/photo-1549921296-3c2b8d2dbd8b?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=60" alt="instructor" data-full="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80">
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="contact-card">
+        <div class="card">
+          <h3>Contact & Quick Book</h3>
+          <p><strong>Call:</strong> <a href="tel:+918766862203">+91 87668 62203</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919322053332" target="_blank">+91 93220 53332</a> &nbsp; <a href="https://wa.me/919834361923" target="_blank">+91 98343 61923</a></p>
+          <p><strong>Address:</strong><br>Masrul, Panchvati, Nashik</p>
+
+          <a class="cta" href="https://wa.me/919322053332?text=Hello%20Malti%20Driving%20School%2C%20I%20want%20to%20book%20a%20slot" target="_blank">Message on WhatsApp</a>
+        </div>
+
+        <div class="card">
+          <h3>Location</h3>
+          <iframe title="Map" src="https://www.google.com/maps?q=Masrul+Panchvati+Nashik&output=embed" style="border:0;width:100%;height:220px;border-radius:8px"></iframe>
+        </div>
+
+        <div class="card">
+          <h3>Enquiry Form</h3>
+          <!-- Using Formspree example: replace FORM_ENDPOINT with your formspree endpoint for automatic emails -->
+          <form id="contactForm" method="POST" action="https://formspree.io/f/yourFormID">
+            <div class="form-row"><div class="col"><input type="text" id="name" name="name" placeholder="Your name" required></div></div>
+            <div style="margin-top:8px"><input type="tel" id="phone" name="phone" placeholder="Phone number" required></div>
+            <div style="margin-top:8px"><select id="vehicle" name="vehicle"><option value="">Select Vehicle</option><option>Bike</option><option>Car</option><option>Truck</option></select></div>
+            <div style="margin-top:8px"><textarea id="message" name="message" rows="3" placeholder="Your message / preferred time"></textarea></div>
+            <div style="margin-top:10px"><button type="submit">Send Enquiry</button></div>
+            <p id="formMsg" style="margin-top:8px;font-size:14px"></p>
+          </form>
+          <p style="font-size:13px;margin-top:10px;color:#556">If automatic email not set up, the form will fallback to WhatsApp (opens chat) after submit.</p>
+        </div>
+
+      </aside>
+    </div>
+
+  </main>
+
+  <!-- Floating WhatsApp (primary) -->
+  <a class="whats" id="wh1" href="https://wa.me/919322053332?text=Hello%20Malti%20Driving%20School%2C%20I%20want%20to%20book%20a%20slot" target="_blank" aria-label="WhatsApp primary">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.478A11.92 11.92 0 0012.001.042 11.95 11.95 0 003.48 3.48 11.953 11.953 0 000 12c0 2.11.55 4.15 1.6 5.95L.5 23l4.28-1.12A11.94 11.94 0 0012 24c3.2 0 6.18-1.25 8.48-3.52A11.95 11.95 0 0024 12c0-3.2-1.25-6.18-3.48-8.52z" fill="#25D366"/><path d="M17.2 14.1c-.3-.1-1.78-.88-2.05-.98-.27-.1-.47-.15-.68.1-.21.26-.78.98-.96 1.18-.18.2-.36.23-.66.08-.3-.15-1.26-.46-2.39-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.11-.11.25-.28.37-.42.12-.15.17-.25.26-.41.09-.16.05-.31-.02-.43-.07-.13-.68-1.64-.93-2.25-.24-.6-.49-.52-.68-.53l-.58-.01c-.2 0-.52.07-.8.31-.28.24-1.07 1.04-1.07 2.54 0 1.5 1.09 2.95 1.24 3.16.15.2 2.15 3.32 5.22 4.66 3.07 1.34 3.07.89 3.62.84.55-.05 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.07-.12-.27-.18-.57-.28z" fill="#fff"/></svg>
+  </a>
+
+  <!-- Floating WhatsApp (secondary number) -->
+  <a class="whats small" id="wh2" href="https://wa.me/919834361923?text=Hello%20Malti%20Driving%20School%2C%20I%20want%20to%20book%20a%20slot" target="_blank" aria-label="WhatsApp secondary">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.478A11.92 11.92 0 0012.001.042 11.95 11.95 0 003.48 3.48 11.953 11.953 0 000 12c0 2.11.55 4.15 1.6 5.95L.5 23l4.28-1.12A11.94 11.94 0 0012 24c3.2 0 6.18-1.25 8.48-3.52A11.95 11.95 0 0024 12c0-3.2-1.25-6.18-3.48-8.52z" fill="#25D366"/><path d="M17.2 14.1c-.3-.1-1.78-.88-2.05-.98-.27-.1-.47-.15-.68.1-.21.26-.78.98-.96 1.18-.18.2-.36.23-.66.08-.3-.15-1.26-.46-2.39-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.11-.11.25-.28.37-.42.12-.15.17-.25.26-.41.09-.16.05-.31-.02-.43-.07-.13-.68-1.64-.93-2.25-.24-.6-.49-.52-.68-.53l-.58-.01c-.2 0-.52.07-.8.31-.28.24-1.07 1.04-1.07 2.54 0 1.5 1.09 2.95 1.24 3.16.15.2 2.15 3.32 5.22 4.66 3.07 1.34 3.07.89 3.62.84.55-.05 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.07-.12-.27-.18-.57-.28z" fill="#fff"/></svg>
+  </a>
+
+  <!-- Gallery modal -->
+  <div id="modal" class="modal" role="dialog" aria-hidden="true">
+    <div class="box">
+      <div class="nav"><button id="prev">◀</button><button id="next">▶</button></div>
+      <img id="modalImg" src="" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong>Malti Driving School</strong><br>Masrul, Panchvati, Nashik<br>
+        <a href="tel:+918766862203">+91 87668 62203</a> • <a href="https://wa.me/919322053332">WhatsApp</a>
+      </div>
+      <div>
+        <p style="margin:0 0 8px">Follow us</p>
+        <a href="#">Facebook</a> &nbsp; <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Gallery lightbox with next/prev
+    const images = Array.from(document.querySelectorAll('#galleryGrid img'));
+    let idx = 0;
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const show = i => { idx = i; modalImg.src = images[i].dataset.full || images[i].src; modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); };
+    images.forEach((img,i)=> img.addEventListener('click', ()=> show(i)));
+    document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id==='modal') modal.classList.remove('show'); });
+    document.getElementById('prev').addEventListener('click', e=>{ e.stopPropagation(); idx = (idx-1+images.length)%images.length; modalImg.src = images[idx].dataset.full || images[idx].src; });
+    document.getElementById('next').addEventListener('click', e=>{ e.stopPropagation(); idx = (idx+1)%images.length; modalImg.src = images[idx].dataset.full || images[idx].src; });
+
+    // Contact form: uses Formspree if action is set; fallback to WhatsApp when user submits
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async e=>{
+      e.preventDefault();
+      const formData = new FormData(form);
+      const name = formData.get('name') || '';
+      const phone = formData.get('phone') || '';
+      const vehicle = formData.get('vehicle') || '';
+      const message = formData.get('message') || '';
+
+      const whatsappText = encodeURIComponent(`Name: ${name} %0APhone: ${phone} %0AVehicle: ${vehicle} %0AMessage: ${message}`);
+
+      // Try submitting to Formspree (if configured)
+      const action = form.getAttribute('action');
+      let usedForm = false;
+      if(action && !action.includes('yourFormID')){
+        try{
+          await fetch(action, {method:'POST',body:formData,headers:{'Accept':'application/json'}}).then(r=>r.json());
+          document.getElementById('formMsg').textContent = 'Thanks — enquiry sent. We will call you soon.';
+          usedForm = true;
+        }catch(err){ console.warn('Form submit failed',err); }
+      }
+
+      // If form not actually sent (Formspree not configured), open WhatsApp chat with primary number
+      if(!usedForm){
+        const waUrl = `https://wa.me/919322053332?text=${whatsappText}`;
+        window.open(waUrl,'_blank');
+      }
+
+      setTimeout(()=>{ document.getElementById('formMsg').textContent=''; form.reset(); },4000);
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=> a.addEventListener('click', e=>{ e.preventDefault(); const id = a.getAttribute('href').slice(1); document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'}); }));
+
+    // Small accessibility: close modal with ESC
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') modal.classList.remove('show'); });
+  </script>
+</body>
+</html>
